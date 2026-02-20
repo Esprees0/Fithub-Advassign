@@ -70,5 +70,5 @@ function streamFile(filePath, res) {
 }
 
 server.listen(port, () => {
-  console.log(`Gymbro frontend running on http://localhost:${port}/index.html`);
+  console.log(`Fithub frontend running on http://localhost:${port}/index.html`);
 });
