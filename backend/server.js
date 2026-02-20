@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { QueryTypes, fn, col, where } = require("sequelize");
-const sequelize = require("./db");
+const sequelize = require("./db.js");
 
 const app = express();
 // CORS for Cloudflare Frontend

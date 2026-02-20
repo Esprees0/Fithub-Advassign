@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require("sequelize");
 
 const dbUrl =
-  process.env.DATABASE_URL || "postgres://user:password@localhost:5432/gymbro_db";
+  process.env.DATABASE_URL || "postgres://webadmin:TQYker76137@node86245-env-9766824.proen.app.ruk-com.cloud:11893/fithub_db";
 
 const sequelize = new Sequelize(dbUrl, {
   dialect: "postgres",
