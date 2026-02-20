@@ -5,8 +5,8 @@
   "description": "Gymbro backend API",
   "main": "server.js",
   "scripts": {
-    "start": "PORT=3000 node server.js",
-    "dev": "PORT=3000 node server.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "license": "MIT",
   "dependencies": {
