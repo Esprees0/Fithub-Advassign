@@ -1,13 +1,17 @@
 const { Sequelize, DataTypes } = require("sequelize");
 
-const dbUrl =
-  process.env.DATABASE_URL || "postgres://webadmin:TQYker76137@node86245:5432/fithub_db";
+const dbUrl = process.env.DATABASE_URL || "postgres://webadmin:TQYker76137@node86245-env-9766824.proen.app.ruk-com.cloud:11893/fithub_db";
 
 const sequelize = new Sequelize(dbUrl, {
   dialect: "postgres",
   logging: false,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false // จำเป็นสำหรับการเชื่อมต่อ Cloud บางประเภท
+    }
+  }
 });
-
 const Customers = sequelize.define(
   "Customers",
   {

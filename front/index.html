@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymbro - จัดการสมาชิก</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic"> <style>
+        body { padding: 20px; max-width: 900px; margin: 0 auto; }
+        .form-group { margin-bottom: 15px; }
+        table { width: 100%; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>🏋️‍♂️ เพิ่มสมาชิกใหม่ (Add Customer)</h2>
+    
+    <form id="customerForm">
+        <div class="flex @600-two">
+            <div class="form-group">
+                <input type="text" id="fullName" placeholder="ชื่อ-นามสกุล" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="อีเมล" required>
+            </div>
+        </div>
+        <div class="flex @600-two">
+            <div class="form-group">
+                <input type="text" id="phone" placeholder="เบอร์โทรศัพท์">
+            </div>
+            <div class="form-group">
+                <select id="memberLevel">
+                    <option value="Basic">Basic</option>
+                    <option value="Premium">Premium</option>
+                    <option value="VIP">VIP</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="button">บันทึกลงฐานข้อมูล</button>
+    </form>
+
+    <hr>
+
+    <h2>รายชื่อสมาชิกปัจจุบัน</h2>
+    <table id="customerTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ชื่อ</th>
+                <th>อีเมล</th>
+                <th>ระดับสมาชิก</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
