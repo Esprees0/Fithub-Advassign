@@ -14,7 +14,7 @@ app.use(
     allowedHeaders: ["Content-Type"],
   })
 );
-app.options("(.*)", cors({ origin: FRONTEND_ORIGIN }));
+app.options(/(.*)/, cors({ origin: FRONTEND_ORIGIN }));
 app.use(express.json());
 
 const runQuery = async (text, params, kind) => {
@@ -399,7 +399,7 @@ if (process.env.HTTPS_KEY && process.env.HTTPS_CERT) {
     const cert = fs.readFileSync(process.env.HTTPS_CERT);
     const httpsPort = process.env.HTTPS_PORT ? parseInt(process.env.HTTPS_PORT, 10) : 3443;
     https.createServer({ key, cert }, app).listen(httpsPort, () => {
-      console.log(`Gymbro backend HTTPS running on ${httpsPort}`);
+      console.log(`Fithub backend HTTPS running on ${httpsPort}`);
     });
   } catch (e) {
     console.error("Failed to start HTTPS server:", e.message);
