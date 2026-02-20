@@ -14,7 +14,7 @@ app.use(
     allowedHeaders: ["Content-Type"],
   })
 );
-app.options(".*", cors({ origin: FRONTEND_ORIGIN }));
+app.options("(.*)", cors({ origin: FRONTEND_ORIGIN }));
 app.use(express.json());
 
 const runQuery = async (text, params, kind) => {
